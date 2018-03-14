@@ -1,0 +1,9 @@
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\TruyenOnline\Model\bin\Debug\Model.dll.config
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\TruyenOnline\Model\bin\Debug\Model.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\TruyenOnline\Model\bin\Debug\Model.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\TruyenOnline\Model\bin\Debug\EntityFramework.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\TruyenOnline\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\TruyenOnline\Model\bin\Debug\EntityFramework.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\TruyenOnline\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\TruyenOnline\Model\obj\Debug\Model.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\TruyenOnline\Model\obj\Debug\Model.pdb
