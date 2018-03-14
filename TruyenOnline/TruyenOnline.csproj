@@ -80,6 +80,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -202,24 +204,151 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AnhHungXaDieu.cs">
+      <DependentUpon>Novel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Novel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Novel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Novel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Novel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Novel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Novel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\css\bootstrap.css" />
+    <Content Include="Assets\css\camera.css" />
+    <Content Include="Assets\css\docs.css" />
+    <Content Include="Assets\css\ie.css" />
+    <Content Include="Assets\css\responsive.css" />
+    <Content Include="Assets\css\style.css" />
+    <Content Include="Assets\css\touchTouch.css" />
+    <Content Include="Assets\images\404.png" />
+    <Content Include="Assets\images\arrows.png" />
+    <Content Include="Assets\images\bg.jpg" />
+    <Content Include="Assets\images\bg_carusel.jpg" />
+    <Content Include="Assets\images\bg_copyright.gif" />
+    <Content Include="Assets\images\bg_inner.gif" />
+    <Content Include="Assets\images\bg_input.gif" />
+    <Content Include="Assets\images\bg_menu.gif" />
+    <Content Include="Assets\images\bg_services.png" />
+    <Content Include="Assets\images\bg_title.png" />
+    <Content Include="Assets\images\bg_ulServ_li.png" />
+    <Content Include="Assets\images\big_white_arrow.png" />
+    <Content Include="Assets\images\blank.png" />
+    <Content Include="Assets\images\bullet.png" />
+    <Content Include="Assets\images\camera-loader.gif" />
+    <Content Include="Assets\images\divider.gif" />
+    <Content Include="Assets\images\form-bg.png" />
+    <Content Include="Assets\images\gallery1.jpg" />
+    <Content Include="Assets\images\gallery_1.jpg" />
+    <Content Include="Assets\images\gallery_2.jpg" />
+    <Content Include="Assets\images\gallery_3.jpg" />
+    <Content Include="Assets\images\gallery_4.jpg" />
+    <Content Include="Assets\images\gallery_5.jpg" />
+    <Content Include="Assets\images\gallery_6.jpg" />
+    <Content Include="Assets\images\gallery_7.jpg" />
+    <Content Include="Assets\images\gallery_8.jpg" />
+    <Content Include="Assets\images\glyphicons-halflings-white.png" />
+    <Content Include="Assets\images\glyphicons-halflings.png" />
+    <Content Include="Assets\images\grey_arrow.png" />
+    <Content Include="Assets\images\left_right.png" />
+    <Content Include="Assets\images\left_right_slider.png" />
+    <Content Include="Assets\images\loader.gif" />
+    <Content Include="Assets\images\loader.png" />
+    <Content Include="Assets\images\logo.png" />
+    <Content Include="Assets\images\magnifier.png" />
+    <Content Include="Assets\images\menu_hover.gif" />
+    <Content Include="Assets\images\month.png" />
+    <Content Include="Assets\images\navbar.gif" />
+    <Content Include="Assets\images\nav_section.jpg" />
+    <Content Include="Assets\images\opa_10.png" />
+    <Content Include="Assets\images\opa_60.png" />
+    <Content Include="Assets\images\photo_1.jpg" />
+    <Content Include="Assets\images\photo_10.jpg" />
+    <Content Include="Assets\images\photo_11.jpg" />
+    <Content Include="Assets\images\photo_12.jpg" />
+    <Content Include="Assets\images\photo_13.jpg" />
+    <Content Include="Assets\images\photo_14.jpg" />
+    <Content Include="Assets\images\photo_15.jpg" />
+    <Content Include="Assets\images\photo_2.jpg" />
+    <Content Include="Assets\images\photo_3.jpg" />
+    <Content Include="Assets\images\photo_4.jpg" />
+    <Content Include="Assets\images\photo_5.jpg" />
+    <Content Include="Assets\images\photo_6.jpg" />
+    <Content Include="Assets\images\photo_7.jpg" />
+    <Content Include="Assets\images\photo_8.jpg" />
+    <Content Include="Assets\images\photo_9.jpg" />
+    <Content Include="Assets\images\pw\plus-minus.png" />
+    <Content Include="Assets\images\pw\pro_button.png" />
+    <Content Include="Assets\images\search.png" />
+    <Content Include="Assets\images\separator.gif" />
+    <Content Include="Assets\images\slider_1.jpg" />
+    <Content Include="Assets\images\slider_2.jpg" />
+    <Content Include="Assets\images\slider_3.jpg" />
+    <Content Include="Assets\images\slider_4.jpg" />
+    <Content Include="Assets\images\small_white_arrow_down_menu.gif" />
+    <Content Include="Assets\images\social_1.png" />
+    <Content Include="Assets\images\social_2.png" />
+    <Content Include="Assets\images\social_3.png" />
+    <Content Include="Assets\images\social_4.png" />
+    <Content Include="Assets\images\social_5.png" />
+    <Content Include="Assets\images\thumbnail-bg.png" />
+    <Content Include="Assets\js\bootstrap.js" />
+    <Content Include="Assets\js\camera.js" />
+    <Content Include="Assets\js\jcarousel.js" />
+    <Content Include="Assets\js\jquery.cookie.js" />
+    <Content Include="Assets\js\jquery.easing.1.3.js" />
+    <Content Include="Assets\js\jquery.flexslider-min.js" />
+    <Content Include="Assets\js\jquery.isotope.min.js" />
+    <Content Include="Assets\js\jquery.js" />
+    <Content Include="Assets\js\jquery.mobile.customized.min.js" />
+    <Content Include="Assets\js\jquery.preloader.js" />
+    <Content Include="Assets\js\superfish.js" />
+    <Content Include="Assets\js\touchTouch.jquery.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Novel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Novel.edmx</DependentUpon>
+      <LastGenOutput>Novel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Novel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Novel.edmx</DependentUpon>
+      <LastGenOutput>Novel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\images\pw\Thumbs.db" />
+    <Content Include="Assets\images\Thumbs.db" />
+    <EntityDeploy Include="Models\Novel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Novel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Novel.edmx.diagram">
+      <DependentUpon>Novel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -278,6 +407,9 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
