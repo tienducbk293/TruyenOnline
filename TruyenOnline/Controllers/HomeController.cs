@@ -16,7 +16,7 @@ namespace TruyenOnline.Controllers
             var novel = (from p in db.Stories orderby p.ID descending select p).Take(1).ToList();
             for (int i = 0; i < novel.Count; i++)
             {
-                Chuoi += "<h2 style = \"text-align:center\" ><b>" + novel[i].ChapName + "</b></h2>";
+                Chuoi += "<h2 style = \"text-align:center\" ><b>" + "Chap " + novel[i].ChapNumber + ": " + novel[i].ChapName + "</b></h2>";
                 Chuoi += "<pre style = \"font-family:Times New Roman; font-size:20px\">" + novel[i].Content +"</pre>";
             }
             ViewBag.View = Chuoi;
