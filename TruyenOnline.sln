@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruyenOnline", "TruyenOnline\TruyenOnline.csproj", "{E02EAEF9-243E-40F3-96E5-96F86A0A1DB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{0D1AAA38-9A4E-4BF1-93CF-8C3B3C0F4FFD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{E02EAEF9-243E-40F3-96E5-96F86A0A1DB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E02EAEF9-243E-40F3-96E5-96F86A0A1DB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E02EAEF9-243E-40F3-96E5-96F86A0A1DB1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D1AAA38-9A4E-4BF1-93CF-8C3B3C0F4FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D1AAA38-9A4E-4BF1-93CF-8C3B3C0F4FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D1AAA38-9A4E-4BF1-93CF-8C3B3C0F4FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D1AAA38-9A4E-4BF1-93CF-8C3B3C0F4FFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
