@@ -12,11 +12,14 @@ namespace TruyenOnline.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class AnhHungXaDieu
+    public partial class Stories
     {
         public int ID { get; set; }
+        public int IDStory { get; set; }
         public int ChapNumber { get; set; }
         public string ChapName { get; set; }
         public string Content { get; set; }
+    
+        public virtual Lists Lists { get; set; }
     }
 }

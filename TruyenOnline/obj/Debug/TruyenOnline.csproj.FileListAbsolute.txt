@@ -79,3 +79,5 @@ c:\users\admin\documents\visual studio 2015\Projects\TruyenOnline\TruyenOnline\b
 c:\users\admin\documents\visual studio 2015\Projects\TruyenOnline\TruyenOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 c:\users\admin\documents\visual studio 2015\Projects\TruyenOnline\TruyenOnline\obj\Debug\TruyenOnline.dll
 c:\users\admin\documents\visual studio 2015\Projects\TruyenOnline\TruyenOnline\obj\Debug\TruyenOnline.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\TruyenOnline\TruyenOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll.example
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\TruyenOnline\TruyenOnline\obj\Debug\TruyenOnline.csprojResolveAssemblyReference.cache

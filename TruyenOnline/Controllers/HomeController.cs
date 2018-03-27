@@ -13,7 +13,7 @@ namespace TruyenOnline.Controllers
         public ActionResult Index()
         {
             string Chuoi = "";
-            var novel = (from p in db.AnhHungXaDieux orderby p.ID descending select p).Take(1).ToList();
+            var novel = (from p in db.Stories orderby p.ID descending select p).Take(1).ToList();
             for (int i = 0; i < novel.Count; i++)
             {
                 Chuoi += "<h2 style = \"text-align:center\" ><b>" + novel[i].ChapName + "</b></h2>";

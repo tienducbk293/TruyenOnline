@@ -25,6 +25,7 @@ namespace TruyenOnline.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<AnhHungXaDieu> AnhHungXaDieux { get; set; }
+        public virtual DbSet<Lists> Lists { get; set; }
+        public virtual DbSet<Stories> Stories { get; set; }
     }
 }

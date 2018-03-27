@@ -7,3 +7,4 @@ C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\TruyenOnline\Model\bin\Debu
 C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\TruyenOnline\Model\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\TruyenOnline\Model\obj\Debug\Model.dll
 C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\TruyenOnline\Model\obj\Debug\Model.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\TruyenOnline\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

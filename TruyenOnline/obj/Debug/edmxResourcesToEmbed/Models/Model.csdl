@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TruyenOnlineModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Lists">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameStory" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ChapterNumber" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Stories" Relationship="Self.FK_Stories" FromRole="Lists" ToRole="Stories" />
+  </EntityType>
+  <EntityType Name="Stories">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDStory" Type="Int32" Nullable="false" />
+    <Property Name="ChapNumber" Type="Int32" Nullable="false" />
+    <Property Name="ChapName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Lists" Relationship="Self.FK_Stories" FromRole="Stories" ToRole="Lists" />
+  </EntityType>
+  <Association Name="FK_Stories">
+    <End Role="Lists" Type="Self.Lists" Multiplicity="1" />
+    <End Role="Stories" Type="Self.Stories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lists">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Stories">
+        <PropertyRef Name="IDStory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TruyenOnlineEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Lists" EntityType="Self.Lists" />
+    <EntitySet Name="Stories" EntityType="Self.Stories" />
+    <AssociationSet Name="FK_Stories" Association="Self.FK_Stories">
+      <End Role="Lists" EntitySet="Lists" />
+      <End Role="Stories" EntitySet="Stories" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

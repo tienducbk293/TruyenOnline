@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TruyenOnlineModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Lists">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameStory" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ChapterNumber" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Stories">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDStory" Type="int" Nullable="false" />
+    <Property Name="ChapNumber" Type="int" Nullable="false" />
+    <Property Name="ChapName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Content" Type="ntext" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Stories">
+    <End Role="Lists" Type="Self.Lists" Multiplicity="1" />
+    <End Role="Stories" Type="Self.Stories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lists">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Stories">
+        <PropertyRef Name="IDStory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TruyenOnlineModelStoreContainer">
+    <EntitySet Name="Lists" EntityType="Self.Lists" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stories" EntityType="Self.Stories" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Stories" Association="Self.FK_Stories">
+      <End Role="Lists" EntitySet="Lists" />
+      <End Role="Stories" EntitySet="Stories" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
